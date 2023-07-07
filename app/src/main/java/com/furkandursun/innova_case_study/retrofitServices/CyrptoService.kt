@@ -10,7 +10,7 @@ import retrofit2.http.GET
 interface CyrptoService {
 
 
-    @GET("coins/markets?vs_currency=try&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=tr")
+    @GET("coins/markets?vs_currency=try&order=market_cap_desc&per_page=20&page=1&sparkline=false&locale=tr")
     fun getAllCrypto(): Call<List<CryptoModel>>
 
 

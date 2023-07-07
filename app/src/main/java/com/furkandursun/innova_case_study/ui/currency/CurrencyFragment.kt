@@ -7,15 +7,17 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.furkandursun.innova_case_study.adapter.CurrencyAdapter
 import com.furkandursun.innova_case_study.databinding.FragmentCurrencyBinding
 
 class CurrencyFragment : Fragment() {
 
     private var _binding: FragmentCurrencyBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
+
+    private lateinit var currencyAdapter: CurrencyAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,10 +30,18 @@ class CurrencyFragment : Fragment() {
         _binding = FragmentCurrencyBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        currencyViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        val recyclerView: RecyclerView = binding.recyclerView
+        currencyAdapter = CurrencyAdapter()
+
+        recyclerView.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = currencyAdapter
         }
+
+        currencyViewModel.currencyList.observe(viewLifecycleOwner) { currencies ->
+            currencyAdapter.submitList(currencies)
+        }
+
         return root
     }
 

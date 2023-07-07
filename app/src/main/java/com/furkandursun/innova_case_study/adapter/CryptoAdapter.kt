@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.furkandursun.innova_case_study.databinding.ItemCryptoBinding
 import com.furkandursun.innova_case_study.model.CryptoModel
 
@@ -17,8 +18,9 @@ class CryptoAdapter : ListAdapter<CryptoModel, CryptoAdapter.CryptoViewHolder>(C
                 nameTextView.text = crypto.name
                 symbolTextView.text = crypto.symbol
                 priceTextView.text = crypto.current_price.toString()
-                // Set the image using a library like Glide or Picasso
-                // Glide.with(itemView.context).load(crypto.image).into(imageView)
+                Glide.with(itemView.context)
+                    .load(crypto.image)
+                    .into(imageView)
             }
         }
     }
