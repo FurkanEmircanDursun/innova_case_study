@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".SignUpActivity"
+    >
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/e_posta"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#999999"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:hint="@string/Sifre"
+        android:inputType="textPassword"
+        android:textColorHint="#999999"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/buttonSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Kaydol"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_background"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+</LinearLayout>
