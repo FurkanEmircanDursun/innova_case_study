@@ -14,7 +14,7 @@ class CurrencyAdapter : ListAdapter<Currency, CurrencyAdapter.CurrencyViewHolder
         fun bind(currency: Currency) {
             binding.apply {
                 nameTextView.text = currency.Isim
-                currencyNameTextView.text = currency.CurrencyName
+
                 forexBuyingTextView.text = currency.ForexBuying
                 forexSellingTextView.text = currency.ForexSelling
                 banknoteBuyingTextView.text = currency.BanknoteBuying
