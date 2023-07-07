@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "486726629876",
+    "project_id": "innova-case-study",
+    "storage_bucket": "innova-case-study.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486726629876:android:441fe23e1a832f1de9e1a1",
+        "android_client_info": {
+          "package_name": "com.furkandursun.innova_case_study"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486726629876-unj6pnh0l523gv1gn75s7ci9vc9p7n3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC57GoAp5nz6CZL5SOCFG0Hq6awmGqRTzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486726629876-unj6pnh0l523gv1gn75s7ci9vc9p7n3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
