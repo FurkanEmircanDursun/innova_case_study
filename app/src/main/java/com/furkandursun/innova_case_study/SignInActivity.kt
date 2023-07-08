@@ -34,6 +34,7 @@ class SignInActivity : AppCompatActivity() {
         binding.buttonSignUp.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
+
         }
 
         // Mevcut kullanıcıyı kontrol et
